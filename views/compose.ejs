@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Compose - Message App</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Compose a New Message</h1>
+    <form action="/send" method="POST">
+      Recipient: <input type="text" name="recipient" size="25" /><br /><br />
+      Message: <textarea name="body" rows="10"></textarea><br /><br />
+      <input type="submit" value="Send" />
+    </form>
+  </body>
+</html>

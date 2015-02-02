@@ -1,4 +1,4 @@
-    var express = require('express');
+var express = require('express');
 var path = require('path');
 var favicon = require('static-favicon');
 var logger = require('morgan');
@@ -9,6 +9,7 @@ var session = require('express-session');
 var routes = require('./routes/index');
 var login = require('./routes/login');
 var inbox = require('./routes/inbox');
+var compose = require('./routes/compose');
 
 var MongoClient = require('mongodb').MongoClient;
 
@@ -37,6 +38,7 @@ app.use(function(req, res, next) {
 app.use('/', routes);
 app.use('/login', login);
 app.use('/inbox', inbox);
+app.use('/compose', compose);
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {
