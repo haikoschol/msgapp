@@ -10,6 +10,7 @@ var routes = require('./routes/index');
 var login = require('./routes/login');
 var inbox = require('./routes/inbox');
 var compose = require('./routes/compose');
+var send = require('./routes/send');
 
 var MongoClient = require('mongodb').MongoClient;
 
@@ -39,6 +40,7 @@ app.use('/', routes);
 app.use('/login', login);
 app.use('/inbox', inbox);
 app.use('/compose', compose);
+app.use('/send', send);
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {
