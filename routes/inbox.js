@@ -6,6 +6,7 @@ router.get('/', function(req, res) {
 
   if (!req.session.email) {
     res.redirect('/');
+    return;
   }
 
   req.messages.findOne({'email': req.session.email}, function(err, data) {
