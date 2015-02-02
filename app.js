@@ -29,6 +29,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(function(req, res, next) {
   MongoClient.connect('mongodb://localhost:27017/msgapp', function(err, db) {
     req.users = db.collection('users');
+    req.messages = db.collection('messages');
     next();
   });
 });
