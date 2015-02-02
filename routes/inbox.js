@@ -8,7 +8,6 @@ router.get('/', function(req, res) {
     res.redirect('/');
   }
 
-
   req.messages.findOne({'email': req.session.email}, function(err, data) {
     if (data) {
       messages = data.messages;
