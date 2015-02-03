@@ -1,0 +1,1 @@
+express app for demonstrating various web security issues like CSRF, XSS and MongoDB injection (the latter is shamelessly ripped from http://blog.websecurify.com/2014/08/hacking-nodejs-and-mongodb.html)
