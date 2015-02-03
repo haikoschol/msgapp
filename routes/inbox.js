@@ -14,7 +14,7 @@ router.get('/', function(req, res) {
       messages = data.messages;
     }
 
-    res.render('inbox', {messages: messages});
+    res.render('inbox', {email: req.session.email, messages: messages});
   });
 });
 
