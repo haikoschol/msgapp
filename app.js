@@ -5,7 +5,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var session = require('express-session');
 
-var routes = require('./routes/index');
+var index = require('./routes/index');
 var login = require('./routes/login');
 var inbox = require('./routes/inbox');
 var compose = require('./routes/compose');
@@ -34,7 +34,7 @@ app.use(function(req, res, next) {
   });
 });
 
-app.use('/', routes);
+app.use('/', index);
 app.use('/login', login);
 app.use('/inbox', inbox);
 app.use('/compose', compose);
